@@ -6,12 +6,11 @@ import (
 	"context"
 	"fmt"
 
-	// "gopkg.in/DataDog/dd-trace-go.v1/contrib/gorm.io/gorm.v1"
 	"gorm.io/gorm"
 )
 
 type studentRepository struct {
-	db *gorm.DB	
+	db *gorm.DB
 }
 
 func (s studentRepository) GetOneByID(ctx context.Context, id int) (model.Student, error) {
@@ -42,6 +41,20 @@ func (s studentRepository) InsertOne(ctx context.Context, student *model.Student
 	}
 	return nil
 
+}
+
+func (s studentRepository) UpdateOne(ctx context.Context, id int, student *model.Student) error {
+	if err := s.db.Model(&model.Student{}).Where("id = ?", id).Updates(student).Error; err != nil {
+		return fmt.Errorf("update student error: %w", err)
+	}
+	return nil
+}
+
+func (s studentRepository) DeleteOne(ctx context.Context, id int) error {
+	if err := s.db.Where("id = ?", id).Delete(&model.Student{}).Error; err != nil {
+		return fmt.Errorf("delete student error: %w", err)
+	}
+	return nil
 }
 
 var instance studentRepository

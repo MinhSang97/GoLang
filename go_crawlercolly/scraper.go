@@ -117,7 +117,7 @@ func Crawler() ([]string, []string, [][]string) {
 		RandomDelay: 4 * time.Second,
 	})
 
-	err := c.Visit("https://ump.edu.vn/")
+	err := c.Visit("https://viblo.asia/newest")
 	if err != nil {
 		log.Fatal(err)
 	}

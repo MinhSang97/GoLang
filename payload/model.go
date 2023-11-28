@@ -8,12 +8,12 @@ import (
 )
 
 type Student struct {
-	FirstName    string
-	LastName     string  `json:"ho"`
-	Age          int     `json: "age,omitempty”`
-	Grade        float32 `json: "grade,omitempty”`
-	ClassName    string
-	EntranceDate time.Time
+	FirstName    string    `json:"first_name"`
+	LastName     string    `json:"last_name"`
+	Age          int       `json:"age"`
+	Grade        float32   `json:"grade"s`
+	ClassName    string    `json:"class_name"`
+	EntranceDate time.Time `json:"entrance_date"`
 }
 
 func (c *Student) FromJson(a string) {
