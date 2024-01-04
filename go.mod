@@ -5,8 +5,8 @@ go 1.19
 require (
 	github.com/gin-gonic/gin v1.9.1
 	github.com/gocolly/colly v1.2.0
+	github.com/gocolly/colly/v2 v2.1.0
 	github.com/golang/mock v1.6.0
-	github.com/sijms/go-ora v1.3.2
 	github.com/stretchr/testify v1.8.4
 	gorm.io/driver/mysql v1.5.2
 	gorm.io/gorm v1.25.5
@@ -53,10 +53,8 @@ require (
 	golang.org/x/net v0.15.0 // indirect
 	golang.org/x/sys v0.12.0 // indirect
 	golang.org/x/text v0.13.0 // indirect
-	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/appengine v1.6.8 // indirect
 	google.golang.org/protobuf v1.30.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
-	gopkg.in/goracle.v2 v2.24.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
